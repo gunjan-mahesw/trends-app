@@ -18,6 +18,6 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
     res.send("API is running...");
-  });
+});
