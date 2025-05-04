@@ -21,3 +21,9 @@ app.listen(PORT, () => {
 app.use("/", (req, res) => {
     res.send("API is running...");
 });
+import cors from 'cors'; 
+app.use(cors({
+  origin: 'http://localhost:5173', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
